@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+
+    --title-color: hsl(234, 12%, 34%);
+    --paragraph-color:  hsl(229, 6%, 66%);
+
+    --font-family: "Poppins", sans-serif;
+
+    --fw-light: 200;
+    --fw-regular: 400;
+    --fw-bold: 600;
+
+    --b-radius: 0.3rem;
+}
+
+html {
+    font-size: 15px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: hsl(0, 0%, 98%);
+    font-family: var(--font-family);
+    height: 100%;
+    display: grid;
+}
+
+body > * {
+    margin: auto;
+}
+
+
+.container {
+    color: var(--title-color);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 500px;
+    margin-inline: auto;
+    gap: 1rem;
+    margin-block: 50px;
+}
+
+.container span {
+    font-weight: var(--fw-light);
+}
+
+.container p {
+    color: var(--paragraph-color);
+}
+
+.wrapper {
+    display: grid;
+    gap: 2rem;
+    margin-inline: 100px;
+    max-width: 960px;
+}
+
+.wrapper > * {
+    place-items: center;
+}
+
+@media (min-width: 650px) {
+    
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wrapper {
+        display: flex;
+    }
+
+    .wrapper > * {
+        flex: 1;
+        align-self: center;
+        min-height: 200px;
+    }
+}
+
+
+
+.card {
+    padding: 20px;
+    border-radius: var(--b-radius);
+    box-shadow: 0 0.7rem 1rem -0.5rem rgb(20 100 150 / 0.25);
+    min-width: 300px;
+    background-color: #fff;
+}
+
+.card p {
+    color: var(--paragraph-color);
+    font-size: 12px;
+}
+
+
+.card img {
+    margin-top: 35px;
+    float: right;
+}
+
+.card-span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.title {
+    color: var(--title-color);
+}
+
+.card1 {
+    border-top: var(--b-radius) solid var(--cyan);
+}
+
+.card2 {
+    border-top: var(--b-radius) solid var(--red);
+}
+
+.card3 {
+    border-top: var(--b-radius) solid var(--orange);
+}
+
+.card4 {
+    border-top: var(--b-radius) solid var(--blue);
+}
+
+footer {
+    margin-top: 50px;
+}
